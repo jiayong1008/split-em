@@ -27,3 +27,4 @@ class InvitationMail extends Mailable
 }
 
 
+
