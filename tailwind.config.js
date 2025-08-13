@@ -20,7 +20,7 @@ export default {
                     ...defaultTheme.fontFamily.sans
                 ]
     		},
-    		keyframes: {
+			keyframes: {
     			float: {
     				'0%, 100%': {
     					transform: 'translateY(0px) scale(1)'
@@ -38,11 +38,22 @@ export default {
     					opacity: 1,
     					transform: 'translateY(0)'
     				}
-    			}
+				},
+				'gradient-x': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				aurora: {
+					'0%': { transform: 'translateX(-20%) translateY(0) rotate(0deg)' },
+					'50%': { transform: 'translateX(20%) translateY(-10%) rotate(15deg)' },
+					'100%': { transform: 'translateX(-20%) translateY(0) rotate(0deg)' }
+				}
     		},
-    		animation: {
+			animation: {
     			float: 'float 8s ease-in-out infinite',
-    			fadeInUp: 'fadeInUp .6s ease-out both'
+				fadeInUp: 'fadeInUp .6s ease-out both',
+				'gradient-x': 'gradient-x 16s ease-in-out infinite',
+				aurora: 'aurora 18s ease-in-out infinite'
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
