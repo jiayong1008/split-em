@@ -1,26 +1,17 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import { SectionCards } from '@/components/section-cards';
 
 export default function Dashboard() {
-    return (
-        <AuthenticatedLayout
-            header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
-                    Dashboard
-                </h2>
-            }
-        >
-            <Head title="Dashboard" />
-
-            <div className="py-12">
-                <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800">
-                        <div className="p-6 text-gray-900 dark:text-gray-100">
-                            You're logged in!
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </AuthenticatedLayout>
-    );
+  return (
+    <AuthenticatedLayout header={<h2 className="text-xl font-semibold leading-tight">Dashboard</h2>}>
+      <Head title="Dashboard" />
+      <div className="flex flex-col gap-6">
+        <SectionCards />
+        <div className="rounded-xl border bg-card p-4 text-sm text-muted-foreground">
+          Charts and data will appear here.
+        </div>
+      </div>
+    </AuthenticatedLayout>
+  );
 }
