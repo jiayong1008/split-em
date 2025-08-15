@@ -26,6 +26,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import { router } from '@inertiajs/react'
 
 export function NavUser({
   user
@@ -88,7 +89,12 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem
+              onSelect={(e) => {
+                e.preventDefault()
+                try { router.post(route('logout')) } catch {}
+              }}
+            >
               <LogOutIcon />
               Log out
             </DropdownMenuItem>
