@@ -129,7 +129,7 @@ export default function CreateSubscriptionPreview() {
 
         <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18 }}>
           <div>
-            <div style={{ fontSize: 12, color: 'rgba(230,238,248,0.7)' }}>Preview Mode</div>
+            {/* <div style={{ fontSize: 12, color: 'rgba(230,238,248,0.7)' }}>Preview Mode</div> */}
             <div style={{ fontSize: 20, fontWeight: 700 }}>Create Subscription</div>
           </div>
           <div style={{ display: 'flex', gap: 10 }}>
