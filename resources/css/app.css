@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ensure WOW elements are visible in case animations are disabled */
+.wow { visibility: visible !important; }
+
+/* Temporarily hide all landing images to bypass missing assets */
+.tp-hero-2__area img,
+.tp-payment__area img,
+.tp-payment-method__area img,
+.tp-service-2__area img,
+.tp-account-area img,
+.tp-testimonial-2-area img,
+.tp-faq-area img,
+.tp-cta-area img,
+.tp-header-2__logo img,
+.tp-footer__area img {
+  display: none !important;
+}
+
+/* Remove background images used by inline styles on landing blocks */
+.tp-hero-2__area,
+.tp-cta-bg,
+.tp-testimonial-2-area {
+  background-image: none !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
