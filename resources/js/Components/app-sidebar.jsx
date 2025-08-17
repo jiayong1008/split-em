@@ -17,6 +17,7 @@ import {
   SettingsIcon,
   UsersIcon,
   CreditCardIcon,
+  CircleDollarSignIcon,
 } from "lucide-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -41,21 +42,21 @@ function buildData(authUser) {
       avatar: '/avatars/shadcn.jpg',
     },
     navMain: [
-      { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboardIcon },
-      { title: 'Subscriptions', url: '/subscriptions', icon: FolderIcon },
-      { title: 'Analytics', url: '#', icon: BarChartIcon },
-      { title: 'Team', url: '#', icon: UsersIcon },
-      { title: 'Billing', url: '#', icon: CreditCardIcon },
+      { title: 'Dashboard', url: '/dashboard', icon: BarChartIcon },
+      { title: 'Subscriptions', url: '/subscriptions', icon: CircleDollarSignIcon },
+      // { title: 'Analytics', url: '#', icon: BarChartIcon },
+      // { title: 'Team', url: '#', icon: UsersIcon },
+      // { title: 'Billing', url: '#', icon: CreditCardIcon },
     ],
     navSecondary: [
-      { title: 'Settings', url: '#', icon: SettingsIcon },
-      { title: 'Get Help', url: '#', icon: HelpCircleIcon },
-      { title: 'Search', url: '#', icon: SearchIcon },
+      // { title: 'Settings', url: '#', icon: SettingsIcon },
+      // { title: 'Get Help', url: '#', icon: HelpCircleIcon },
+      // { title: 'Search', url: '#', icon: SearchIcon },
     ],
     documents: [
-      { name: 'Create Subscription', url: '/subscriptions/create', icon: ClipboardListIcon },
-      { name: 'Invitations', url: '#', icon: FileTextIcon },
-      { name: 'Payments', url: '#', icon: DatabaseIcon },
+      // { name: 'Create Subscription', url: '/subscriptions/create', icon: ClipboardListIcon },
+      // { name: 'Invitations', url: '#', icon: FileTextIcon },
+      // { name: 'Payments', url: '#', icon: DatabaseIcon },
     ],
   }
 }
@@ -82,7 +83,7 @@ export function AppSidebar({
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
+        {/* <NavDocuments items={data.documents} /> */}
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
