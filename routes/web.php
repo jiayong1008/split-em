@@ -8,9 +8,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return Inertia::render('Landing');
-});
+Route::view('/', 'landing')->name('home');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
@@ -47,4 +45,4 @@ Route::post('/webhooks/airwallex', function (Request $request) {
 
 // Optional: serve a classic static HTML landing (Blade renders the raw HTML)
 // Visit /marketing to see it. Swap this into the '/' route when ready.
-Route::view('/marketing', 'landing')->name('marketing.landing');
+Route::redirect('/marketing', '/')->name('marketing.landing');

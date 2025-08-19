@@ -5,7 +5,7 @@
    <base href="{{ rtrim(asset('vendor/softec'), '/') }}/">
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>pay less for every subscription</title>
+   <title>Split'em — Pay Less For Every Subscription</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    
@@ -52,7 +52,7 @@
                <div class="search__wrapper">
                   <div class="search__top d-flex justify-content-between align-items-center">
                      <div class="search__logo">
-                        <a href="home-main.html">
+                        <a href="/">
                            <span style="font-weight:700;font-size:20px;color:#fff">Split'em</span>
                         </a>
                      </div>
@@ -90,7 +90,7 @@
       <header class="header-bottom__transparent z-index-6 tp-header-height">
 
          <!-- header top area -->
-         <div class="header-top__area header-top__space z-index-3 d-none d-md-block tp-header-top-animation">
+         <!-- <div class="header-top__area header-top__space z-index-3 d-none d-md-block tp-header-top-animation">
             <div class="container">
                <div class="row align-items-start">
                   <div class="col-6">
@@ -111,7 +111,7 @@
                   </div>
                </div>
             </div>
-         </div>
+         </div> -->
 
          <!-- header bottom -->
          <div id="header-sticky" class="header-bottom__area header-mob-space header-bottom__area-2 header-bottom__transparent z-index-5">
@@ -119,17 +119,17 @@
                <div class="row align-items-center">
                   <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                      <div class="header-bottom__logo">
-                        <a href="index.html"><span style="font-weight:700;font-size:20px">Split'em</span></a>
+                        <a href="/"><span style="font-weight:700;font-size:20px">Split'em</span></a>
                      </div>
                   </div>
                   <div class="col-xxl-6 col-xl-5 col-lg-5 d-none d-lg-block">
                      <div class="header-bottom__main-menu">
                         <nav id="mobile-menu">
-                           <ul>
+                           <!-- <ul>
                               <li>
-                                 <a href="index.html">Home</a>
+                                 <a href="/">Home</a>
                                  <ul class="submenu">
-                                    <li><a href="index.html">Data analytics</a></li>
+                                    <li><a href="/">Data analytics</a></li>
                                     <li><a href="index-2.html">Payment Gateway</a></li>
                                     <li><a href="index-3.html">CRM Software</a></li>
                                     <li><a href="index-4.html">Security Software</a></li>
@@ -170,7 +170,7 @@
                                  </ul>
                               </li>
                               <li><a href="contact.html">Contact</a></li>
-                           </ul>
+                           </ul> -->
                         </nav>
                      </div>
                   </div>
@@ -187,7 +187,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                               </svg>
                            </a>
-                           <a class="d-none d-lg-inline-block last-child" href="register.html">
+                           <a class="d-none d-lg-inline-block last-child" href="{{ route('login') }}">
                               <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                  <path
@@ -224,7 +224,7 @@
                <button class="close-btn"><i class="fal fa-times"></i></button>
             </div>
             <div class="tpoffcanvas__logo text-center">
-               <a href="index.html">
+               <a href="/">
                   <img src="assets/img/logo/logo-white.png" alt="">
                </a>
             </div>
@@ -290,29 +290,14 @@
                                     </svg>                             
                                  </div>
                               </div>
-                              <div class="tp-hero__input p-relative wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                                 <form action="#">
-                                    <div class="p-relative">
-                                       <input type="text" placeholder="Business email adress">
-                                       <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path
-                                          d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
-                                          stroke="#5F6168" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                          stroke-linejoin="round" />
-                                       <path opacity="0.4"
-                                          d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
-                                          stroke="#5F6168" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                          stroke-linejoin="round" />
-                                       </svg>
-                                    </div>
-                                    <button class="tp-btn tp-btn-hover alt-color-black">
-                                       <span>Get A Demo</span>
-                                       <b></b>
-                                    </button>
-                                 </form>
-                              </div>
-                              <p class="wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">We are not going to save your data</p>
+                              <p class=\"wow tpfadeUp\" data-wow-duration=\".9s\" data-wow-delay=\".7s\" data-hero-tagline=\"true\">Create a subscription group, invite friends via link or QR, and everybody pays their share securely.</p>
+                               <div class="tp-hero__cta wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                                  <a class="tp-btn tp-btn-hover alt-color-black" href="/subscriptions/create">
+                                     <span>Create Subscription</span>
+                                     <b></b>
+                                  </a>
+                               </div>
+                               
                            </div>
                         </div>
                      </div>
@@ -382,19 +367,22 @@
                   <div class="row justify-content-center">
                      <div class="col-xl-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".2s">
                         <div class="tp-feature__section-box text-center mb-55 tp-title-anim">
-                           <h2 class="tp-section-title">Our Exciting Features</h2>
-                           <p>More than 15,000 companies trust and choose Itech</p>
+                           <h2 class="tp-section-title">How It Works</h2>
+                           <p>Create a group, invite friends via link or QR, and pay your share securely</p>
                         </div>
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".4s">
-                        <div id="divtest" class="tp-feature__item">
-                           <div class="tp-feature__icon">
-                              <img src="assets/img/feature/fea-icon-1.png" alt="">
+                     <div class="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".4s">
+                        <div class="tp-service__item mb-30">
+                           <div class="tp-service__icon">
+                              <img src="assets/img/service/sv-icon-1.png" alt="">
                            </div>
-                           <h3 class="tp-feature__title-sm">A Unified View of The Customer</h3>
-                           <div class="tp-feature__link">
+                           <div class="tp-service__content">
+                              <h3 class="tp-service__title-sm tp-orange-color"><a href="service-details.html">Create Subscription</a></h3>
+                              <p>Start a group subscription in seconds.</p>
+                           </div>
+                           <div class="tp-service__link">
                               <a href="service-details.html">
                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -407,13 +395,16 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
-                        <div class="tp-feature__item">
-                           <div class="tp-feature__icon">
-                              <img src="assets/img/feature/fea-icon-2.png" alt="">
+                     <div class="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
+                        <div class="tp-service__item mb-30">
+                           <div class="tp-service__icon">
+                              <img src="assets/img/service/sv-icon-2.png" alt="">
                            </div>
-                           <h3 class="tp-feature__title-sm">Industry Leading Procedures</h3>
-                           <div class="tp-feature__link">
+                           <div class="tp-service__content">
+                              <h3 class="tp-service__title-sm tp-theme-color"><a href="service-details.html">Invite People</a></h3>
+                              <p>Share a link or QR code; anyone can join.</p>
+                           </div>
+                           <div class="tp-service__link">
                               <a href="service-details.html">
                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -426,13 +417,16 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".8s">
-                        <div class="tp-feature__item">
-                           <div class="tp-feature__icon">
-                              <img src="assets/img/feature/fea-icon-3.png" alt="">
+                     <div class="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                        <div class="tp-service__item mb-30">
+                           <div class="tp-service__icon">
+                              <img src="assets/img/service/sv-icon-3.png" alt="">
                            </div>
-                           <h3 class="tp-feature__title-sm">Collaboration Across <br> All Areas</h3>
-                           <div class="tp-feature__link">
+                           <div class="tp-service__content">
+                              <h3 class="tp-service__title-sm tp-purple-color"><a href="service-details.html">Members Pay Their Share</a></h3>
+                              <p>Split the bill and charge each member securely.</p>
+                           </div>
+                           <div class="tp-service__link">
                               <a href="service-details.html">
                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -491,8 +485,8 @@
                               </ul>
                            </div>
                            <div class="tp-about__btn">
-                              <a class="tp-btn tp-btn-hover alt-color-black" href="about.html">
-                                 <span>About Us</span>
+                              <a class="tp-btn tp-btn-hover alt-color-black" href="{{ route('subscriptions.create') }}">
+                                 <span>Create Subscription</span>
                                  <b></b>
                               </a>
                            </div>
@@ -504,14 +498,14 @@
             <!-- tp-about-area-end -->
 
             <!-- tp-services-area-start -->
-            <div class="tp-service__area p-relative fix">
+            <!-- <div class="tp-service__area p-relative fix">
                <div class="tp-service__grey-shape grey-bg"></div>
                <div class="container">
                   <div class="row justify-content-center">
                      <div class="col-lg-8">
                         <div class="tp-service__section-box mb-50 text-center tp-title-anim">
                            <h2 class="tp-section-title">Explore Our Data Services</h2>
-                           <p>More than 15,000 companies trust and choose Itech</p>
+                           <p>Create a group, invite friends via link or QR, and pay your share securely</p>
                         </div>
                      </div>
                   </div>
@@ -648,11 +642,11 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
             <!-- tp-services-area-end -->
 
             <!-- tp-project-area-start -->
-            <div class="tp-project__area grey-bg pt-50 pb-110 fix">
+            <!-- <div class="tp-project__area grey-bg pt-50 pb-110 fix">
                <div class="container">
                   <div class="row">
                      <div class="col-xl-6">
@@ -843,7 +837,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
             <!-- tp-project-area-end -->
 
             <!-- tp-testimonial-area-start -->
@@ -927,12 +921,12 @@
                                                 <img src="assets/img/testimonial/testi-logo-up-3.png" alt="">
                                              </div>
                                              <div class="tp-testimonial__content z-index">
-                                                <p>“Business growth is a point a business reaches where it expands and requires more avenues to generate a profit. This can happen when a company increases revenue.”
+                                                <p>“I no longer have to beg people to pay me every month. Split'em just managed my subsccriptions for me. Thank God.”
                                                 </p>
                                              </div>
                                              <div class="tp-testimonial__author-info z-index">
-                                                <span>Benjamin Evalent</span>
-                                                <i>WP Developer</i>
+                                                <span>Lim Jia Leong</span>
+                                                <i>Split'em User</i>
                                              </div>
                                           </div>
                                        </div>
@@ -944,8 +938,8 @@
                                                    versus control group.</p>
                                              </div>
                                              <div class="tp-testimonial__link">
-                                                <a href="project-details.html">
-                                                   Read Case Study
+                                                <a href="{{ route('subscriptions.create') }}">
+                                                   Create Subscrption Now
                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                       <path d="M1 7H13" stroke="#6865FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                       <path d="M7 1L13 7L7 13" stroke="#6865FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1265,7 +1259,7 @@
             <!-- tp-testimonial-area-end -->
 
             <!-- tp-rank-area-start -->
-            <div class="tp-rank__area pb-200">
+            <!-- <div class="tp-rank__area pb-200">
                <div class="container">
                   <div class="row">
                      <div class="col-xl-5 col-lg-5 order-1 order-lg-1">
@@ -1368,11 +1362,11 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
             <!-- tp-rank-area-end -->
 
             <!-- tp-price-area-start -->
-            <div class="tp-price__area tp-price__pl-pr p-relative pt-110 pb-80">
+            <!-- <div class="tp-price__area tp-price__pl-pr p-relative pt-110 pb-80">
                <div class="container">
                   <div class="row justify-content-center">
                      <div class="col-xl-7 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
@@ -1772,7 +1766,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
             <!-- tp-price-area-end -->
 
 
@@ -1827,12 +1821,13 @@
                         <div class="row">
                            <div class="col-xl-4 col-lg-4 col-md-7 pb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                               <div class="tp-footer__widget footer-col-1">
-                                 <a href="index.html" class="tp-footer__widget-logo mb-10">
-                                    <img src="assets/img/logo/logo-white.png" alt="">
-                                 </a>
+                                 <a href="/" class="tp-footer__widget-logo mb-10">
+                                     <span style="font-weight:700;font-size:20px;color:#fff">Split'em</span>
+                                  </a>
                                  <div class="tp-footer__text">
-                                    <p>Our highly skilled development teams <br>
-                                       specialized in data analysis.</p>
+                                    <p>Create a subscription group, <br>
+                                        invite friends via link or QR, <br>
+                                        and everybody pays their share securely.</p>
                                  </div>
                                  <div class="tp-footer__social">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1844,21 +1839,18 @@
                            </div>
                            <div class="col-xl-3 col-lg-3 col-md-5 pb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                               <div class="tp-footer__widget footer-col-2">
-                                 <h4 class="tp-footer__widget-title">What We Do</h4>
+                                 <h4 class="tp-footer__widget-title">Links</h4>
                                  <div class="tp-footer__content">
                                     <ul>
-                                       <li><a href="#">Business</a></li>
-                                       <li><a href="#">Technology</a></li>
-                                       <li><a href="#">Online Marketing</a></li>
-                                       <li><a href="#">Advertising Strategy</a></li>
-                                       <li><a href="#">Strategy</a></li>
-                                       <li><a href="#">Development</a></li>
-                                    </ul>
+                                       <li><a href="/login">Login</a></li>
+                                       <li><a href="/register">Register</a></li>
+                                       <li><a href="/subscriptions/create">Create Subscription</a></li>
+                                      </ul>
                                  </div>
                               </div>
                            </div>
                            <div class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-                              <div class="tp-footer__widget footer-col-3">
+                              <div class="tp-footer__widget footer-col-3" style="display:none">
                                  <h4 class="tp-footer__widget-title">Other Pages</h4>
                                  <div class="tp-footer__content">
                                     <ul>
