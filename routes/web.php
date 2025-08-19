@@ -44,3 +44,7 @@ Route::post('/webhooks/airwallex', function (Request $request) {
     // Accept event and return 200 to sandbox
     return response()->json(['received' => true]);
 })->name('webhooks.airwallex');
+
+// Optional: serve a classic static HTML landing (Blade renders the raw HTML)
+// Visit /marketing to see it. Swap this into the '/' route when ready.
+Route::view('/marketing', 'landing')->name('marketing.landing');
