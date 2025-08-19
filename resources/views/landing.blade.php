@@ -25,6 +25,21 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+
+   
+   <style>
+     .tp-about__list ul li i.fal.fa-check {
+       color: #fff !important;
+       background-color: #22c55e !important;
+       border-radius: 9999px;
+       width: 22px;
+       height: 22px;
+       line-height: 22px;
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+     }
+   </style>
 </head>
 
 <body>
@@ -379,11 +394,11 @@
                               <img src="assets/img/service/sv-icon-1.png" alt="">
                            </div>
                            <div class="tp-service__content">
-                              <h3 class="tp-service__title-sm tp-orange-color"><a href="service-details.html">Create Subscription</a></h3>
+                              <h3 class="tp-service__title-sm tp-orange-color"><a href="{{ route('subscriptions.create') }}">Create Subscription</a></h3>
                               <p>Start a group subscription in seconds.</p>
                            </div>
                            <div class="tp-service__link">
-                              <a href="service-details.html">
+                              <a href="{{ route('subscriptions.create') }}">
                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
@@ -401,8 +416,8 @@
                               <img src="assets/img/service/sv-icon-2.png" alt="">
                            </div>
                            <div class="tp-service__content">
-                              <h3 class="tp-service__title-sm tp-theme-color"><a href="service-details.html">Invite People</a></h3>
-                              <p>Share a link or QR code; anyone can join.</p>
+                              <h3 class="tp-service__title-sm tp-theme-color"><a href="{{ route('subscriptions.create') }}">Invite People</a></h3>
+                              <p>Share a link or QR code, anyone can join.</p>
                            </div>
                            <div class="tp-service__link">
                               <a href="service-details.html">
@@ -423,7 +438,7 @@
                               <img src="assets/img/service/sv-icon-3.png" alt="">
                            </div>
                            <div class="tp-service__content">
-                              <h3 class="tp-service__title-sm tp-purple-color"><a href="service-details.html">Members Pay Their Share</a></h3>
+                              <h3 class="tp-service__title-sm tp-purple-color"><a href="{{ route('subscriptions.create') }}">Members Pay Their Share</a></h3>
                               <p>Split the bill and charge each member securely.</p>
                            </div>
                            <div class="tp-service__link">
@@ -472,16 +487,15 @@
                         <div class="tp-about__right">
                            <div class="tp-about__section-box">
                               <h4 class="tp-section-subtitle">OVER 150K+ CLIENT</h4>
-                              <h3 class="tp-section-title mb-15">We Offer Real Time Data Solutions
+                              <h3 class="tp-section-title mb-15">Say Goodbye to These Headaches
                               </h3>
-                              <p>Excepteur sint occaecat cupidatat officia non proident <br>
-                                 sunt in culpa qui deserunt.!</p>
+                              <p>Shared monthly subscriptions are a pain. You end up paying more than you should, and you have to chase for monthly payments.</p>
                            </div>
                            <div class="tp-about__list">
                               <ul>
-                                 <li><i class="fal fa-check"></i>Various analysis options.</li>
-                                 <li><i class="fal fa-check"></i>Page Load (time, size, number of requests).</li>
-                                 <li><i class="fal fa-check"></i>Big data analysis.</li>
+                                 <li><i class="fal fa-times"></i>Members not paying their share.</li>
+                                 <li><i class="fal fa-times"></i>Chasing for monthly payments.</li>
+                                 <li><i class="fal fa-times"></i>You end up paying more than you should.</li>
                               </ul>
                            </div>
                            <div class="tp-about__btn">
@@ -490,6 +504,57 @@
                                  <b></b>
                               </a>
                            </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-about-area-end -->
+
+            <!-- tp-about-area-start -->
+            <div class="tp-about__area tp-about__pt-pb pt-100 pb-160">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".2s">
+                        <div class="tp-about__right">
+                            <div class="tp-about__section-box">
+                                <h4 class="tp-section-subtitle">OVER 150K+ CLIENT</h4>
+                                <h3 class="tp-section-title mb-15">Split'em Fixes The Hassle
+                                </h3>
+                                <p>Split’em takes the headache out of shared subscriptions, ensuring fair splits and timely payments.</p>
+                            </div>
+                            <div class="tp-about__list">
+                                <ul>
+                                    <li><i class="fal fa-check" style="color:#fff"></i>Members pay on time.</li>
+                                    <li><i class="fal fa-check" style="color:#fff"></i>No more chasing payments.</li>
+                                    <li><i class="fal fa-check" style="color:#fff"></i>Fair cost, always.</li>
+                                </ul>
+                            </div>
+                            <div class="tp-about__btn">
+                                <a class="tp-btn tp-btn-hover alt-color-black" href="{{ route('subscriptions.create') }}">
+                                    <span>Create Subscription</span>
+                                    <b></b>
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".6s">
+                        <div class="tp-about__img-wrapper text-center text-lg-end p-relative">
+                            <div class="tp-about__bg-shape">
+                                <img src="assets/img/about/about-bg-shape.png" alt="">
+                            </div>
+                            <div class="tp-about__main-img z-index">
+                                <img src="assets/img/about/about-2.jpg" alt="">
+                            </div>
+                            <div class="tp-about__sub-img-1 d-none d-sm-block z-index-3">
+                                <img src="assets/img/about/about-1.jpg" alt="">
+                            </div>
+                            <div class="tp-about__sub-img-2 d-none d-sm-block">
+                                <img src="assets/img/about/about-3.jpg" alt="">
+                            </div>
+                            <div class="tp-about__sub-img-3 d-none d-sm-block z-index-3">
+                                <img src="assets/img/about/about-5.png" alt="">
+                            </div>
                         </div>
                      </div>
                   </div>
@@ -841,7 +906,7 @@
             <!-- tp-project-area-end -->
 
             <!-- tp-testimonial-area-start -->
-            <div class="tp-testimonial__area pt-105 pb-200 fix">
+            <div class="tp-testimonial__area pt-105 pb-120 fix">
                <div class="container">
                   <div class="row justify-content-center">
                      <div class="col-xl-6">
@@ -933,9 +998,8 @@
                                        <div class="col-xl-5 col-lg-5">
                                           <div class="tp-testimonial__right-item d-flex flex-column justify-content-between">
                                              <div class="tp-testimonial__increase">
-                                                <span>94%</span>
-                                                <p>Increase in offline purchases
-                                                   versus control group.</p>
+                                                <span>80%</span>
+                                                <p>Saved cost.</p>
                                              </div>
                                              <div class="tp-testimonial__link">
                                                 <a href="{{ route('subscriptions.create') }}">
@@ -977,7 +1041,7 @@
                                                    versus control group.</p>
                                              </div>
                                              <div class="tp-testimonial__link">
-                                                <a href="#">
+                                                <a href="{{ route('subscriptions.create') }}">
                                                    Read Case Study
                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                       <path d="M1 7H13" stroke="#6865FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1257,6 +1321,115 @@
                </div>
             </div>
             <!-- tp-testimonial-area-end -->
+
+            <!-- tp-faq-area-start -->
+            <div class="tp-faq-area pt-40 pb-200 fix">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6">
+                        <div class="tp-faq-left-wrapper p-relative">
+                           <div class="tp-faq-section-box pb-20">
+                              <h4 class="tp-section-subtitle-2">Support</h4>
+                              <h3 class="tp-section-title-lg">Frequently <br> Asked Questions</h3>
+                              <p>Sed ut perspiciatis unde omnis iste natus error <br> sit voluptatem accusantium.!</p>
+                           </div>
+                           <div class="tp-faq-btn">
+                              <a class="tp-btn-green" href="contact.html">Get in Touch</a>
+                           </div>
+                           <div class="tp-faq-img" data-parallax='{"x": -50, "smoothness": 30}'>
+                              <img src="assets/img/faq/faq-1.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6">
+                        <div class="tp-custom-accordion">
+                           <div class="accordion" id="accordionExample">
+                              <div class="accordion-items">
+                                 <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                                       data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                       What happens if someone doesn’t pay their share?
+                                       <span class="accordion-btn"></span>
+                                    </button>
+                                 </h2>
+                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        No worries! Your subscription only activates when all members pay their exact share. If someone drops out, the group deactivates until you invite another person in.
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-items tp-faq-active">
+                                 <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-buttons" type="button" data-bs-toggle="collapse"
+                                       data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       What if I need to change my group or leave?
+                                       <span class="accordion-btn"></span>
+                                    </button>
+                                 </h2>
+                                 <div id="collapseTwo" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    Flexibility is key. You can update member shares or leave a group anytime.
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-items">
+                                 <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                                       data-bs-target="#collapseThree" aria-expanded="false"
+                                       aria-controls="collapseThree">
+                                       How do I collect payments monthly from my subscibers?
+                                       <span class="accordion-btn"></span>
+                                    </button>
+                                 </h2>
+                                 <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    You don't. Once members joine your subscription group, members are automatically charged the same amount after the deadline, eliminating the need to chase payments—just like any standard subscription!
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-items">
+                                 <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                                       data-bs-target="#collapseThree" aria-expanded="false"
+                                       aria-controls="collapseThree">
+                                       When is the payout to host?
+                                       <span class="accordion-btn"></span>
+                                    </button>
+                                 </h2>
+                                 <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    Payouts to the host are processed within 2 business days after the monthly deadline, once all members’ payments are confirmed, transferred directly to your preferred bank account.
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-items">
+                                 <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                                       data-bs-target="#collapseThree" aria-expanded="false"
+                                       aria-controls="collapseThree">
+                                       How much does Split'em cost?
+                                       <span class="accordion-btn"></span>
+                                    </button>
+                                 </h2>
+                                 <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    As a member, you pay 2.8% or RM1 per payment (whichever is higher) to join a group. Hosts create groups for free—no upfront cost for anyone!
+                                    </div>
+                                 </div>
+                              </div>
+                            
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- tp-faq-area-end -->
 
             <!-- tp-rank-area-start -->
             <!-- <div class="tp-rank__area pb-200">
@@ -1833,7 +2006,7 @@
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                    <!-- <a href="#"><i class="fab fa-vimeo-v"></i></a> -->
                                  </div>
                               </div>
                            </div>
