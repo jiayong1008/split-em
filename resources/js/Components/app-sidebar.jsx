@@ -73,10 +73,11 @@ export function AppSidebar({
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
-              <Link href="/" className="flex items-center gap-2">
+              {/* Use a normal anchor for non-Inertia landing route to force a full document navigation */}
+              <a href="/" className="flex items-center gap-2">
                 <ApplicationLogo className="h-6 w-auto fill-current" />
                 <span className="text-base font-semibold">Split'em</span>
-              </Link>
+              </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

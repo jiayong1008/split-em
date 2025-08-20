@@ -1329,12 +1329,12 @@
                      <div class="col-xl-6 col-lg-6">
                         <div class="tp-faq-left-wrapper p-relative">
                            <div class="tp-faq-section-box pb-20">
-                              <h4 class="tp-section-subtitle-2">Support</h4>
-                              <h3 class="tp-section-title-lg">Frequently <br> Asked Questions</h3>
-                              <p>Sed ut perspiciatis unde omnis iste natus error <br> sit voluptatem accusantium.!</p>
+                              <h4 class="tp-section-subtitle">Support</h4>
+                              <h3 class="tp-section-title">Frequently <br> Asked Questions</h3>
+                              <p>Answering your questions in mind.</p>
                            </div>
                            <div class="tp-faq-btn">
-                              <a class="tp-btn-green" href="contact.html">Get in Touch</a>
+                              <a class="tp-btn tp-btn-hover alt-color-black" href="{{ route('subscriptions.create') }}">Create Subscription</a>
                            </div>
                            <div class="tp-faq-img" data-parallax='{"x": -50, "smoothness": 30}'>
                               <img src="assets/img/faq/faq-1.png" alt="">
